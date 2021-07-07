@@ -32,18 +32,17 @@ ifneq (,$(findstring moe,$(MODULES)))
 endif
 	
 min-css:
-	$(NODE) $(CURDIR)/node_modules/.bin/cleancss --skip-rebase --O1 specialComments:0 $(CURDIR)/static/css/pomf.css --output $(CURDIR)/build/pomf.min.css
+	$(NODE) $(CURDIR)/node_modules/.bin/cleancss $(CURDIR)/static/css/pomf.css --output $(CURDIR)/build/pomf.min.css
 
 min-js:
 	echo "// @source https://github.com/pomf/pomf/tree/master/static/js" > $(CURDIR)/build/pomf.min.js 
 	echo "// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat" >> $(CURDIR)/build/pomf.min.js
-	$(NODE) $(CURDIR)/node_modules/.bin/uglifyjs  --screw-ie8 ./static/js/app.js >> $(CURDIR)/build/pomf.min.js 
+	$(NODE) $(CURDIR)/node_modules/.bin/uglifyjs ./static/js/app.js >> $(CURDIR)/build/pomf.min.js 
 	echo "// @license-end" >> $(CURDIR)/build/pomf.min.js
 
 copy-img:
 	cp -v $(CURDIR)/static/img/*.png $(CURDIR)/build/img/
-	cp -vT $(CURDIR)/static/img/favicon.ico $(CURDIR)/build/favicon.ico
-
+	
 copy-php:
 ifneq ($(wildcard $(CURDIR)/static/php/.),)
 	cp -rv $(CURDIR)/static/php/* $(CURDIR)/build/

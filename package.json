@@ -1,8 +1,8 @@
 {
   "name": "pomf",
-  "version": "2.1.0",
-  "description": "Kawaii file host",
-  "homepage": "https://pantsu.cat/",
+  "version": "2.6.0",
+  "description": "Kawaii file hosting",
+  "homepage": "https://demo.pomf.se",
   "repository": {
     "type": "git",
     "url": "https://github.com/pomf/pomf"
@@ -20,9 +20,9 @@
     "url": "https://github.com/pomf/pomf/issues"
   },
   "devDependencies": {
-    "clean-css": "^4.2.1",
-    "clean-css-cli": "^4.3.0",
-    "uglify-js": "^2.6.2",
+    "clean-css": "^5.1.2",
+    "clean-css-cli": "^5.3.0",
+    "uglify-js": "^3.13.9",
     "swig": "^1.4.2"
   },
   "dependencies": {

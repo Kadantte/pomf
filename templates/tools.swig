@@ -5,6 +5,7 @@
 <div class="jumbotron">
 <h1>Pomf Tools</h1>
 </div>
+<div class="alert alert-info">
     <h3>
       To upload using curl or make a tool you can post using:
 
@@ -29,7 +30,7 @@
 		<dt>Source</dt>
 		<dd><a href="https://github.com/ShareX/ShareX">https://github.com/ShareX/ShareX</a></dd>
 		<dt>Contact</dt>
-		<dd><a href="https://webchat.freenode.net/?channels=%23ShareX">#ShareX on irc.freenode.net</a></dd>
+		<dd><a href="https://discord.gg/ShareX">Discord</a></dd>
 	</dl>
 </section>
 <section>
@@ -59,5 +60,6 @@
 		<dd><a href="mailto:les@fuwafuwa.moe">les@fuwafuwa.moe</a></dd>
 	</dl>
 </section>
+</div>
 {% include "nav.swig" %}
 {% endblock %}
